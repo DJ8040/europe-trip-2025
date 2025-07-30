@@ -20,14 +20,11 @@
     }
 
     .container {
-        max-width: 750px;
-        background-color: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        padding: 1.2rem;
-        border-radius: 10px;
-        margin: auto;
-        opacity: 0.95;
+      max-width: 900px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 10px;
+      margin: auto;
     }
 
     h1, h2 {
@@ -50,7 +47,7 @@
     }
 
     ul li::before {
-      content: "📁 ";
+      content: "✈️ ";
       margin-right: 0.5rem;
     }
 
@@ -62,6 +59,15 @@
   </style>
 </head>
 <body>
+  <div id="password-gate" style="text-align:center; margin-top: 20vh;">
+    <h2>Please enter the password to access the trip site:</h2>
+    <input type="password" id="passwordInput" placeholder="Password" style="padding: 0.5rem; font-size: 1rem;">
+    <button onclick="checkPassword()" style="padding: 0.5rem 1rem; font-size: 1rem; margin-left: 0.5rem;">Submit</button>
+    <p id="error-message" style="color: red; display: none;">Incorrect password. Try again.</p>
+  </div>
+
+  <div id="main-content" style="display:none;">
+
   <div class="container">
     <h1>🇺🇸 Jones & Goodwin Europe Trip 2025 🇨🇦</h1>
     <p>Welcome! Use this page to access our trip calendar and shared resources.</p>
@@ -70,12 +76,27 @@
     <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FDenver&showPrint=0&showTabs=0&showCalendars=0&mode=AGENDA&title=Europe%20Trip%20Cal&showTitle=0&src=MTdkZjhmNmFiMDFiMmJkYWExNDA5MjRlMDExZmNlZTIwY2RmMTkyY2FiYjMwNjA2YmMxMDNlZTA3Y2UyMTJhNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23ad1457" style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no">
     </iframe>
 
-    <h2>🔗 Useful Links</h2>
+    <h2>🔑 Useful Links</h2>
     <ul>
       <li><a href="https://drive.google.com/drive/folders/1b0v3Hsoo63fSr29eCvOJaO7q2mz1vsOp?usp=sharing" target="_blank">Shared File Folder</a></li>
       <li><a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank">Trip Itinerary PDF</a></li>
       <li><a href="https://maps.app.goo.gl/SOME_MAP" target="_blank">Custom Google Map</a></li>
     </ul>
   </div>
+
+  </div> <!-- end of main-content -->
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('passwordInput').value;
+      const correctPassword = 'euro2025'; // You can change this
+      if (input === correctPassword) {
+        document.getElementById('password-gate').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+      } else {
+        document.getElementById('error-message').style.display = 'block';
+      }
+    }
+  </script>
+
 </body>
 </html>
