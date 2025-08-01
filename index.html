@@ -13,29 +13,43 @@
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: center;
-      color: #fff;
-      text-shadow: 1px 1px 2px #000;
+      color: #e0f7fa;
+      text-shadow: 1px 1px 3px #004d40;
       margin: 0;
       padding: 2rem;
     }
 
     .container {
       max-width: 750px;
-      background-color: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      padding: 1.2rem;
-      border-radius: 10px;
+      background-color: rgba(0, 30, 60, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 2rem;
+      border-radius: 14px;
       margin: auto;
-      opacity: 0.95;
+      opacity: 0.98;
+      box-shadow: 0 0 15px rgba(0, 30, 60, 0.3);
     }
 
-    h1, h2 {
-      color: #ffeb3b;
+    h1 {
+      color: #81d4fa;
+      font-size: 2.8rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: #4fc3f7;
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      color: #b3e5fc;
     }
 
     a {
-      color: #90caf9;
+      color: #4dd0e1;
+      text-decoration: underline;
     }
 
     iframe {
@@ -50,25 +64,136 @@
     }
 
     ul li::before {
-      content: "✈️ ";
+      content: "🏔️ ";
       margin-right: 0.5rem;
     }
 
     .funny-intro {
       font-style: italic;
-      border-left: 4px solid #ffeb3b;
+      border-left: 4px solid #81d4fa;
       padding-left: 1rem;
       margin: 1.5rem 0;
-      color: #ffe082;
-      text-shadow: 1px 1px 2px #000;
+      color: #b2ebf2;
+      text-shadow: 1px 1px 2px #004d40;
     }
 
     @media (max-width: 600px) {
       body {
         padding: 1rem;
       }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
     }
-  </style>
+</style>
+
+<style>
+  .snow-cap {
+    position: relative;
+    display: inline-block;
+  }
+
+  .snow-cap::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: url('https://i.imgur.com/kGz8U5n.png') repeat-x;
+    background-size: contain;
+    pointer-events: none;
+  }
+
+  .cable-car {
+    position: fixed;
+    top: 60px;
+    left: -100px;
+    width: 80px;
+    height: auto;
+    z-index: 1000;
+    animation: glide 30s linear infinite;
+  }
+
+  @keyframes glide {
+    0% {
+      transform: translateX(-100px) translateY(0px);
+    }
+    25% {
+      transform: translateX(25vw) translateY(10vh);
+    }
+    50% {
+      transform: translateX(50vw) translateY(0vh);
+    }
+    75% {
+      transform: translateX(75vw) translateY(10vh);
+    }
+    100% {
+      transform: translateX(100vw) translateY(0px);
+    }
+  }
+</style>
+
+
+<style>
+  .goat {
+    position: fixed;
+    bottom: 0;
+    width: 60px;
+    animation: bounce 4s infinite ease-in-out;
+    z-index: 1001;
+  }
+
+  .goat:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+  }
+
+  .goat:nth-child(2) {
+    left: 25%;
+    animation-delay: 1s;
+  }
+
+  .goat:nth-child(3) {
+    left: 45%;
+    animation-delay: 2s;
+  }
+
+  .goat:nth-child(4) {
+    left: 65%;
+    animation-delay: 3s;
+  }
+
+  .goat:nth-child(5) {
+    left: 85%;
+    animation-delay: 4s;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+</style>
+
+<script>
+  window.onload = function() {
+    const yodel = new Audio('https://www.fesliyanstudios.com/play-mp3/6526'); // Yodel audio
+    yodel.volume = 0.15;
+    yodel.play().catch(e => {
+      console.log('Autoplay blocked, user interaction required.');
+    });
+  };
+</script>
+
 </head>
 <body>
   <div id="password-gate" style="text-align:center; margin-top: 20vh;">
@@ -136,7 +261,7 @@
   updateCountdown();
 </script>
 
-      <h1>🇺🇸 Jones & Goodwin Europe Trip 2025 🇺🇸</h1>
+      <h1 class="snow-cap">🇺🇸 Jones & Goodwin Europe Trip 2025 🇺🇸</h1>
       <p>Welcome! Use this page to access our trip calendar and shared resources.</p>
 
       <p class="funny-intro">
@@ -174,5 +299,15 @@
       }
     }
   </script>
+
+<img src="https://i.imgur.com/5aS2wdx.png" alt="Cable Car" class="cable-car" />
+
+
+<img src="https://i.imgur.com/7MTd20v.png" class="goat" />
+<img src="https://i.imgur.com/7MTd20v.png" class="goat" />
+<img src="https://i.imgur.com/7MTd20v.png" class="goat" />
+<img src="https://i.imgur.com/7MTd20v.png" class="goat" />
+<img src="https://i.imgur.com/7MTd20v.png" class="goat" />
+
 </body>
 </html>
