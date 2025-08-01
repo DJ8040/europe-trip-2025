@@ -31,7 +31,7 @@
     }
 
     h1, h2 {
-      color: #0b5394;
+      color: #ffeb3b;
     }
 
     a {
@@ -81,8 +81,36 @@
   <div id="main-content" style="display:none;">
     <div class="container">
 
-<h2 id="countdown-header">⏳ Countdown to London Departure</h2>
-<h3 id="countdown-timer" style="color:#ffeb3b; font-size: 1.5rem;"></h3>
+
+<div style="text-align: center; margin-bottom: 1.5rem;">
+  <h2 id="countdown-header">⏳ Countdown to London Departure</h2>
+  <h3 id="countdown-timer" style="color:#ffeb3b; font-size: 1.5rem;"></h3>
+</div>
+<script>
+  const targetDate = new Date("September 11, 2025 17:35:00 GMT-0600").getTime();
+  const timer = document.getElementById("countdown-timer");
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      timer.innerHTML = "✈️ Time to fly!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
 <script>
   const targetDate = new Date("September 11, 2025 17:35:00 GMT-0600").getTime();
   const timer = document.getElementById("countdown-timer");
