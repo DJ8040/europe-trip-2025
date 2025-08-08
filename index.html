@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jones & Goodwin Concur Europe 2025</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jones &amp; Goodwin Concur Europe 2025</title>
+<style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-image: url('europe-2025-map.png');
@@ -90,7 +91,6 @@
       }
     }
 </style>
-
 <style>
   .flags {
     position: relative;
@@ -137,8 +137,6 @@
     }
   }
 </style>
-
-
 <style>
   .goat {
     position: fixed;
@@ -182,7 +180,6 @@
     }
   }
 </style>
-
 <script>
   window.onload = function() {
     const yodel = new Audio('https://www.fesliyanstudios.com/play-mp3/6526'); // Yodel audio
@@ -192,23 +189,19 @@
     });
   };
 </script>
-
 </head>
 <body>
-  <div id="password-gate" style="text-align:center; margin-top: 20vh;">
-    <h2>Please enter the password to access the trip site:</h2>
-    <input type="password" id="passwordInput" placeholder="Password" style="padding: 0.5rem; font-size: 1rem;">
-    <button onclick="checkPassword()" style="padding: 0.5rem 1rem; font-size: 1rem; margin-left: 0.5rem;">Submit</button>
-    <p id="error-message" style="color: red; display: none;">Ahh ahh ahh you didn't say the magic word. Try again.</p>
-  </div>
-
-  <div id="main-content" style="display:none;">
-    <div class="container">
-
-
+<div id="password-gate" style="text-align:center; margin-top: 20vh;">
+<h2>Please enter the password to access the trip site:</h2>
+<input id="passwordInput" placeholder="Password" style="padding: 0.5rem; font-size: 1rem;" type="password"/>
+<button onclick="checkPassword()" style="padding: 0.5rem 1rem; font-size: 1rem; margin-left: 0.5rem;">Submit</button>
+<p id="error-message" style="color: red; display: none;">Ahh ahh ahh you didn't say the magic word. Try again.</p>
+</div>
+<div id="main-content" style="display:none;">
+<div class="container">
 <div style="text-align: center; margin-bottom: 1.5rem;">
-  <h2 id="countdown-header">⏳ Countdown to Departure ⏳</h2>
-  <h3 id="countdown-timer" style="color:#ffeb3b; font-size: 1.5rem;"></h3>
+<h2 id="countdown-header">⏳ Countdown to Departure ⏳</h2>
+<h3 id="countdown-timer" style="color:#ffeb3b; font-size: 1.5rem;"></h3>
 </div>
 <script>
   const targetDate = new Date("September 11, 2025 17:35:00 GMT-0600").getTime();
@@ -234,7 +227,6 @@
   setInterval(updateCountdown, 1000);
   updateCountdown();
 </script>
-
 <script>
   const targetDate = new Date("September 11, 2025 17:35:00 GMT-0600").getTime();
   const timer = document.getElementById("countdown-timer");
@@ -259,40 +251,33 @@
   setInterval(updateCountdown, 1000);
   updateCountdown();
 </script>
-
-      <h1 class="flags">🇺🇸 Jones & Goodwin Europe Trip 2025 🇺🇸</h1>
-      <p>Welcome! Use this page to access our trip calendar and shared resources.</p>
-
-      <p class="funny-intro">
+<h1 class="flags">🇺🇸 Jones &amp; Goodwin Europe Trip 2025 🇺🇸</h1>
+<p>Welcome! Use this page to access our trip calendar and shared resources.</p>
+<p class="funny-intro">
         We’re about to embark on a journey that includes questionable scooter decisions, 
         Swiss cheese-induced altitude hallucinations, and enough wine tastings to qualify 
         for a second passport. From the pubs of London to the peaks of Jungfraujoch, 
         follow along as four brave(ish) souls attempt to survive Europe with dignity, 
         snacks, and a dangerously loose itinerary.
       </p>
-      
-      <h2>🔑 Useful Links</h2>
-      <ul>
-        <li><a href="https://drive.google.com/drive/folders/1b0v3Hsoo63fSr29eCvOJaO7q2mz1vsOp?usp=sharing" target="_blank">Shared Google Drive</a></li>
-        <li><a href="https://docs.google.com/document/d/1J3AW-sKy3k9ptGhZBdjJ3tG5i6IN4Ieu/edit?usp=drive_link&ouid=115655363509505291122&rtpof=true&sd=true" target="_blank">Trip Itinerary</a></li>
-        <li><a href="https://drive.google.com/drive/folders/1DSFZ5aMVSUUEQRryeNC_NmyoTweYToxc?usp=drive_link" target="_blank">Travel Tips</a></li>
-      </ul>
-
-      <h2>Map</h2>
-      <p>
-        <a href="https://www.google.com/maps/d/u/0/viewer?mid=1Izc-ADcxkBWTFXd1Cj6sstoDzegLuB4" target="_blank">
-          <img src="map-preview.png" alt="View Trip Map" style="width:100%; max-width:600px; border:2px solid #81d4fa; border-radius: 8px;" />
-          <br><strong>View Interactive Trip Map</strong>
-        </a>
-      </p>
-      
-      <h2>📅 Trip Cal</h2>
-      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FDenver&showPrint=0&showTabs=0&showCalendars=0&mode=AGENDA&title=Europe%20Trip%20Cal&showTitle=0&src=MTdkZjhmNmFiMDFiMmJkYWExNDA5MjRlMDExZmNlZTIwY2RmMTkyY2FiYjMwNjA2YmMxMDNlZTA3Y2UyMTJhNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23ad1457" style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
-
-    </div>
-  </div>
-
-  <script>
+<h2>🔑 Useful Links</h2>
+<ul>
+<li><a href="https://drive.google.com/drive/folders/1b0v3Hsoo63fSr29eCvOJaO7q2mz1vsOp?usp=sharing" target="_blank">Shared Google Drive</a></li>
+<li><a href="https://docs.google.com/document/d/1J3AW-sKy3k9ptGhZBdjJ3tG5i6IN4Ieu/edit?usp=drive_link&amp;ouid=115655363509505291122&amp;rtpof=true&amp;sd=true" target="_blank">Trip Itinerary</a></li>
+<li><a href="https://drive.google.com/drive/folders/1DSFZ5aMVSUUEQRryeNC_NmyoTweYToxc?usp=drive_link" target="_blank">Travel Tips</a></li>
+</ul>
+<h2>Map</h2>
+<p>
+<a href="https://www.google.com/maps/d/u/0/viewer?mid=1Izc-ADcxkBWTFXd1Cj6sstoDzegLuB4" target="_blank">
+<img alt="View Trip Map" src="map-preview.png" style="width:100%; max-width:600px; border:2px solid #81d4fa; border-radius: 8px;"/>
+<br/><strong>View Interactive Trip Map</strong>
+</a>
+</p>
+<h2>📅 Trip Cal</h2>
+<iframe frameborder="0" height="600" scrolling="no" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;ctz=America%2FDenver&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;title=Europe%20Trip%20Cal&amp;showTitle=0&amp;src=MTdkZjhmNmFiMDFiMmJkYWExNDA5MjRlMDExZmNlZTIwY2RmMTkyY2FiYjMwNjA2YmMxMDNlZTA3Y2UyMTJhNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23ad1457" style="border:solid 1px #777" width="1000"></iframe>
+</div>
+</div>
+<script>
     function checkPassword() {
       const input = document.getElementById('passwordInput').value;
       const correctPassword = 'euro2025';
@@ -304,17 +289,12 @@
       }
     }
   </script>
-
-<img src="cablecar.png" alt="Cable Car" class="cable-car" />
-
-
-<img src="goat.png" class="goat" />
-<img src="goat.png" class="goat" />
-<img src="goat.png" class="goat" />
-<img src="goat.png" class="goat" />
-<img src="goat.png" class="goat" />
-
-
+<img alt="Cable Car" class="cable-car" src="cablecar.png"/>
+<img class="goat" src="goat.png" style="left: 5%; animation-delay: 0s;"/>
+<img class="goat" src="goat.png" style="left: 25%; animation-delay: 1s;"/>
+<img class="goat" src="goat.png" style="left: 45%; animation-delay: 2s;"/>
+<img class="goat" src="goat.png" style="left: 65%; animation-delay: 3s;"/>
+<img class="goat" src="goat.png" style="left: 85%; animation-delay: 4s;"/>
 <script>
   document.getElementById('passwordInput').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
@@ -322,6 +302,5 @@
     }
   });
 </script>
-
 </body>
 </html>
